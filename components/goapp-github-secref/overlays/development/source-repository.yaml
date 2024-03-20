@@ -4,11 +4,12 @@ metadata:
   name: goapp-github-secref-repository
 spec:
   url: https://github.com/stephanie-cy/goapp-github-secref
-  secret:
-      name: "gitops-auth-secret"
-      # Set this if you have a different key in your secret
-      key: "password"
-  webhook_secret:
-      name: "rhtap-pipeline-secret"
-      # Set this if you have a different key in your secret
-      key: "webhook-github-secret"
+  git_provider:
+    secret:
+        name: "gitops-auth-secret"
+        # Set this if you have a different key in your secret
+        key: "password"
+    webhook_secret:
+        name: "rhtap-pipeline-secret"
+        # Set this if you have a different key in your secret
+        key: "webhook-github-secret"
