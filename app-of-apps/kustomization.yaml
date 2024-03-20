@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: goapp-github-secref 
+  janus-idp.io/tekton: goapp-github-secref
+  backstage.io/kubernetes-id: goapp-github-secref
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: goapp-github-secref
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
